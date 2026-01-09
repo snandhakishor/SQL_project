@@ -15,7 +15,7 @@ select customer_type, count(distinct CustomerKey) as `count`
 from customer_type_count
 group by customer_type;
 
--- Most valuable and most active customers by gender 
+-- Problem - Find most valuable and most active customers by gender 
 
 select Gender, 
 round((total_quantity/sum(total_quantity) over())*100,2) as `total_quantity %`, 
@@ -27,4 +27,16 @@ on s.CustomerKey = c.CustomerKey
 inner join dim_products p 
 on s.ProductKey = p.ProductKey
 group by Gender) as gender_table
-group by Gender
+group by Gender;
+
+-- Problem: find average order value by year 
+
+with orders_by_year as
+(select count(distinct s.`Order Number`) as total_orders, 
+year(s.`Order Date`) as year_, sum(p.`Unit Price USD`*s.Quantity) as sales
+from sales s inner join dim_products p
+on s.ProductKey = p.ProductKey
+group by year_ )
+select year_, sales/total_orders as AOV 
+from orders_by_year
+group by year_;
