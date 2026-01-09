@@ -65,3 +65,15 @@ Compare total number of one-time and repeat customers to understand customer sat
 
 **Insights**
 Number of repeat customers (7272) were greater than that of one-time customers (4615) indicating that many are satisfied with the orders. 
+
+## 2. Product Quantity percentage  and sales percentage by gender.
+
+**Business problem**
+To find most valuable and active customers by gender
+
+**Approach**
+- Joined customers, sales and products table to get relevant fields such as gender, sales and quantity.
+- Used subquery and window function to find percentage contribution of each gender to sales and quantity.
+
+**Insights**
+Both genders male and female contribute roughly the same in both areas with males slightly higher than females (1%).
