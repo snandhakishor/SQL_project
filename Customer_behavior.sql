@@ -41,19 +41,20 @@ select year_, sales/total_orders as AOV
 from orders_by_year
 group by year_;
 
--- 4) Problem: sales by customer age group
+-- 4) Problem: Avg sales by customer age group
 
 with sales_by_age as
-(select  sum(s.Quantity*p.`Unit Price USD`) as sales, timestampdiff(year, c.Birthday, curdate()) as age_
+(select  avg(s.Quantity*p.`Unit Price USD`) as avg_sales, timestampdiff(year, c.Birthday, curdate()) as age_
 from sales s inner join  dim_customers c
 on s.CustomerKey = c.CustomerKey
 inner join dim_products p on s.ProductKey = p.ProductKey
 group by age_), sales_agegroup as
-(select sales, 
+(select avg_sales, 
 case when age_ between 18 and 25 then "18-25"
 	 when age_ between 25 and 50 then "25-50"
      when age_>50 then "above 50"
 else "below 18" end as age_group from sales_by_age)
-select age_group, sum(sales) as total_sales
+select age_group, avg(avg_sales) as avg_sales
 from sales_agegroup
 group by age_group;
+

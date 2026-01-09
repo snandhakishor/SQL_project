@@ -76,4 +76,30 @@ To find most valuable and active customers by gender
 - Used subquery and window function to find percentage contribution of each gender to sales and quantity.
 
 **Insights**
-Both genders male and female contribute roughly the same in both areas with males slightly higher than females (1%).
+Both male and female contribute roughly the same in both areas with males contributing slightly higher than females (1%).
+
+## 3. Average Order Value over year
+
+**Business problem**
+How did customer spending reflect over years?
+
+**Approach**
+- Used table joins to join product and sales table to fetch relevant columns such as price and quantity to derive sales.
+- Used CTE and window functions to group and find AOV over years.
+
+**Insights**
+- There were no significant variations over year.
+- 2017 reported highest AOV with $1724.34 per order.
+
+## 4. Average Sales by Age group 
+
+**Business problem**
+Which age group spends the most on average?
+
+**Approach**
+- Derived age column using DOB with timestampdiff() function and derived age group column by clearly defining age ranges using "case...end as" clause.
+- Used CTE to divide the query into managable steps 
+- Used window function for aggregation and grouping 
+
+**Insights**
+- Customers above 50 were most spending, age group 25-50 was slightly behind first and the least spening group was 18-25.
