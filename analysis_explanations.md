@@ -26,17 +26,33 @@ Six out of eight categories have more than 50% profit percentage.
 
 # Sales Analysis
 
-## 1. Running Sales by Month
+## 1. Sales by month
+
+**Business problem**
+What is the monthly sales throughout every year?
+
+**Approach**
+- Joined products and sales table to derive sales column 
+- Used date and format functions to derive months of respective years
+- Used window functions to appropriately aggregate the results
+
+
+**Insights**
+- December 2019 reported highest sales among all months
+- April month consistently reported lowest sales among every year
+
+## 2. Running Sales by Month
 
 **Business Problem**
 What is the monthly running total sales?
 
 **Approach**
 - Joined sales and product tables to derive sales (quantity*price),
-- Used CTE, window and date functions to derive month and running total sales.
+- Used CTE, window such as partition and date functions to derive month and running total sales.
 
 **Insights**
-Sales growth is mostly steady over month.
+- 2019 had highest cumilative sales by the end of the year ($1991974.68)
+- 2020 january had best opening showing momentum from previous year 
 
 ## 2. Current year sales vs previous year sales
 
