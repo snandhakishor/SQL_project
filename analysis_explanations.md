@@ -23,6 +23,31 @@ What is the profit percentage of each product category.
 **Insights**
 Six out of eight categories have more than 50% profit percentage.
 
+## 3. Pareto Distribution of Product by sales 
+
+**Business Problem**
+Does the sales follow pareto distribution for products?
+
+**Approach**
+- Joined products and sales table using join to combine import column for analysis
+- Used row_number() function to rank products based on high sales.
+- Found cumilative sales and found percentage sales contribution to compare with top product percentage using other window functions and CTE
+
+**Insights**
+Sales nearly followed pareto distrubtion with top 20 % products achieving 71 % of the total sales
+
+## 4. Top 20 selling products with least profit
+
+**Business Question**
+What are least profitable products among most selling products
+
+**Approach**
+- Joins to gather relevant columns cost and price from products table and quanitity from sales table.
+- CTE to divide querying and window function for aggregating sales and profit.
+
+**Insights**
+- 'Adventure Works Desktop PC1.80 ED182 Brown' was the least profitable product of the list ranking 18th in sales.
+- Despite selling more than the other 2 products, it delivered least profitablity that them.
 
 # Sales Analysis
 
@@ -54,7 +79,7 @@ What is the monthly running total sales?
 - 2019 had highest cumilative sales by the end of the year ($1991974.68)
 - 2020 january had best opening showing momentum from previous year 
 
-## 2. Current year sales vs previous year sales
+## 3. Current year sales vs previous year sales
 
 **Business Problem**
 How does current year sales perform compared to previous year sales.
@@ -67,6 +92,18 @@ How does current year sales perform compared to previous year sales.
 **Insights**
 Current year sales were greater than previous year sales for most years, except for year 2020.
 
+## 4. Rolling Average by month
+
+**Business problem**
+What is the three months rolling average of sales
+
+**Approach**
+- Joined sales and product tables to fetch and derive relevant columns.
+- used CTE and window functions to find average of three month window.
+- Defined window as rows between 2 perceding and current row.
+
+**Insights**
+There are huge fluctuations in average sales indicating that the average sales is not consistent over month despite the smoothing effect of averaging.
 
 # Customer Behavior 
 

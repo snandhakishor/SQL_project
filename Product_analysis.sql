@@ -45,6 +45,7 @@ from sales s inner join dim_products p
 on s.ProductKey = p.ProductKey
 group by p.ProductKey, `Product Name`
 order by sales desc limit 20)
-select ProductKey, `Product Name`, sales, profit
+select ProductKey, `Product Name`, sales, profit,
+dense_rank() over (order by sales desc) as sales_rnk
 from top_selling_products
 order by profit;
