@@ -25,8 +25,15 @@ This project analyzes sales trend, product perforamnce and Customer Behavior of 
 - Aggregations
 
 ## Project Structure 
-- SQL queries and code
+- sql/ - SQL queries 
   1. Sales Analysis
   2. Product Analysis
   3. Customer Behavior
-- Analysis Explanations document
+- docs/ - Analysis Explanations
+- data/
+  1. Customers CSV
+  2. Products CSV
+  3. Sales CSV
+
+## Documentation
+Detailed explanations of each analysis are availabe in docs/analysis_explanations.md
