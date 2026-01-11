@@ -1,0 +1,32 @@
+# Sales and Customer Behavior Analytics
+
+## Overview 
+This project analyzes sales trend, product perforamnce and Customer Behavior of a Global Electronics Retailer using advanced SQL.
+
+## Dataset Overview
+- Time Period - January 2016 - February 2021
+- Sales Table: Total Orders - 62884
+- Products Table: Total Products - 2517
+- Customers Table: Total Customers - 15266
+
+## Key Performance Indicators 
+- Revenue = 43212329.17 dollars
+- Total Profit = 36025803.42 dollars
+
+## Key Analysis
+- Sales-time series analysis: monthly, cumilative, YoY comparisons
+- Product Performance: Top selling products and category, profitablitly
+- Customer Behavior and demograhic contribution to sales
+
+## SQL Techniques Used
+- Joins
+- CTEs and subqueries
+- Window functions
+- Aggregations
+
+## Project Structure 
+- SQL queries and code
+  1. Sales Analysis
+  2. Product Analysis
+  3. Customer Behavior
+- Analysis Explanations document
