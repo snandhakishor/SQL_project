@@ -4,6 +4,7 @@
 This project analyzes sales trend, product perforamnce and Customer Behavior of a Global Electronics Retailer using advanced SQL.
 
 ## Dataset Overview
+### Dataset Source - https://mavenanalytics.io/data-playground/global-electronics-retailer
 - Time Period - January 2016 - February 2021
 - Sales Table: Total Orders - 62884
 - Products Table: Total Products - 2517
