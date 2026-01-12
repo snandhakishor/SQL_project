@@ -26,7 +26,7 @@ Six out of eight categories have more than 50% profit percentage.
 ## 3. Pareto Distribution of Product by sales 
 
 **Business Problem**
-Does the sales follow pareto distribution for products?
+Do a small percentage of products account for the majority of sales revenue?
 
 **Approach**
 - Joined products and sales table using join to combine import column for analysis
@@ -34,7 +34,7 @@ Does the sales follow pareto distribution for products?
 - Found cumilative sales and found percentage sales contribution to compare with top product percentage using other window functions and CTE
 
 **Insights**
-Sales nearly followed pareto distrubtion with top 20 % products achieving 71 % of the total sales
+Sales nearly followed pareto principle with top 20 % products achieving 71 % of the total sales
 
 ## 4. Top 20 selling products with least profit
 
@@ -114,7 +114,7 @@ Compare total number of one-time and repeat customers to understand customer sat
 
 **Approach**
 - Joined customers and sales table to find total number of orders for each customer key.
-- Used multiple CTEs to classify customer keys as 'one-time' or 'repeat' based on number of orders with the help of "case..when..then..else" clause and finally find count of 'one-time' and 'repeat' customer keys.
+- Used multiple CTEs to classify customer keys as 'one-time' or 'repeat' based on number of orders with the help of "case..when..then..else..end as" clause and finally find count of 'one-time' and 'repeat' customer keys.
 
 **Insights**
 Number of repeat customers (7272) were greater than that of one-time customers (4615) indicating that many are satisfied with the orders. 
